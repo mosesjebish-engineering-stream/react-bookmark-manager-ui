@@ -27,16 +27,19 @@ function App() {
     <TabList>
       <Tab>Bookmark Cards</Tab>
       <Tab>Create Cards</Tab>
+      <Tab>Shorten url</Tab>
     </TabList>
  
     <TabPanel>
-      <h2>Any content 1</h2>
       <div>
           <BookMarkManager image={images}/>
       </div>
     </TabPanel>
     <TabPanel>
-      <h2>Any content 2</h2>
+      <h2>You can Create Cards here</h2>
+    </TabPanel>
+    <TabPanel>
+      <h2>You can shorten urls here</h2>
     </TabPanel>
     </Tabs>
     </div>
