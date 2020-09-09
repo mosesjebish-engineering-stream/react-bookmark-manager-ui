@@ -25,21 +25,31 @@ function App() {
     <div className="container mx-auto">
 <Tabs>
     <TabList>
-      <Tab>Bookmark Cards</Tab>
-      <Tab>Create Cards</Tab>
+      
+      <Tab>All Cards</Tab>
+      <Tab>Groups</Tab>
       <Tab>Shorten url</Tab>
+      <Tab>Create Cards</Tab>
+      <Tab>Task List</Tab>
     </TabList>
- 
+
+
     <TabPanel>
       <div>
           <BookMarkManager image={images}/>
       </div>
     </TabPanel>
     <TabPanel>
+      <h2>You can view groups here</h2>
+    </TabPanel> 
+    <TabPanel>
+      <h2>You can shorten urls here</h2>
+    </TabPanel> 
+    <TabPanel>
       <h2>You can Create Cards here</h2>
     </TabPanel>
     <TabPanel>
-      <h2>You can shorten urls here</h2>
+      <h2>You can validate changes here here</h2>
     </TabPanel>
     </Tabs>
     </div>

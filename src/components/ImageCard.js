@@ -4,31 +4,31 @@ import BookMarkManager from './BookMarkManager';
 
 // const ImageCard = ({ image }) => {
 //   const tags = image.tags.split(',');
-const ImageCard = () => {
+const ImageCard = ({ image }) => {
   
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg">
       {/* <img src={image.webformatURL} alt="" className="w-full"/> */}
       <div className="px-6 py-4">
         <div className="font-bold text-purple-500 text-xl mb-2">
-          Title
+          Title 
         </div>
         <ul>
           <li>
-            <strong>Title: </strong>
-            Bookmark 1
+            <strong>Url: </strong>
+            {image.shortUrl}
           </li>
           <li>
             <strong>Description: </strong>
-            Description of url
+            {image.description}
           </li>
           <li>
-            <strong>Created on: </strong>
-            Creation Date
+            <strong>Created By: </strong>
+            {image.userId}
           </li>
         </ul>
       </div>
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick={<BookMarkManager image={"Bookmark 1"}/>}>
+      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={<BookMarkManager image={"Bookmark 1"}/>}>
         Button
       </button>
       
