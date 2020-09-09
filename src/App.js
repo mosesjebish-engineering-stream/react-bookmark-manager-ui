@@ -3,6 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import ImageCard from './components/ImageCard';
 import ImageSearch from './components/ImageSearch';
+import CreateCard from './components/CreateCard';
 import BookMarkManager from './components/BookMarkManager';
 
 
@@ -46,7 +47,9 @@ function App() {
       <h2>You can shorten urls here</h2>
     </TabPanel> 
     <TabPanel>
-      <h2>You can Create Cards here</h2>
+      <div>
+        <CreateCard/>
+        </div>
     </TabPanel>
     <TabPanel>
       <h2>You can validate changes here here</h2>
