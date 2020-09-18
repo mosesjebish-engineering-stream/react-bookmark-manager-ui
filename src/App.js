@@ -1,62 +1,44 @@
-import React, { useState, useEffect } from 'react';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import React, {Component} from 'react';
+import {Tab, TabList, TabPanel, Tabs} from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import ImageCard from './components/ImageCard';
-import ImageSearch from './components/ImageSearch';
-import CreateCard from './components/CreateCard';
-import BookMarkManager from './components/BookMarkManager';
+import CardManagement from './components/CardManagement';
+import ShortenUrl from "./components/ShortenUrl";
+import GroupManagement from "./components/GroupManagement";
 
 
-function App() {
-  const [images, setImages] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [term, setTerm] = useState('');
+class App extends Component {
+    render() {
+        return (
+            <div className="container mx-auto">
 
-  useEffect(() => {
-    // fetch(`https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_API_KEY}&q=${term}&image_type=photo&pretty=true`)
-    //   .then(res => res.json())
-    //   .then(data => {
-    //     setImages(data.hits);
-    //     setIsLoading(false);
-    //   })
-    //   .catch(err => console.log(err));
-  }, [term]);
+                <Tabs>
+                    <TabList>
 
-  return (
-    <div className="container mx-auto">
-<Tabs>
-    <TabList>
-      
-      <Tab>All Cards</Tab>
-      <Tab>Groups</Tab>
-      <Tab>Shorten url</Tab>
-      <Tab>Create Cards</Tab>
-      <Tab>Task List</Tab>
-    </TabList>
+                        <Tab>All Cards</Tab>
+                        <Tab>Groups</Tab>
+                        <Tab>Shorten url</Tab>
+                        <Tab>Task List</Tab>
+                    </TabList>
 
 
-    <TabPanel>
-      <div>
-          <BookMarkManager image={images}/>
-      </div>
-    </TabPanel>
-    <TabPanel>
-      <h2>You can view groups here</h2>
-    </TabPanel> 
-    <TabPanel>
-      <h2>You can shorten urls here</h2>
-    </TabPanel> 
-    <TabPanel>
-      <div>
-        <CreateCard/>
-        </div>
-    </TabPanel>
-    <TabPanel>
-      <h2>You can validate changes here here</h2>
-    </TabPanel>
-    </Tabs>
-    </div>
-  );
+                    <TabPanel>
+                        <div>
+                            <CardManagement/>
+                        </div>
+                    </TabPanel>
+                    <TabPanel>
+                        <GroupManagement/>
+                    </TabPanel>
+                    <TabPanel>
+                        <ShortenUrl/>
+                    </TabPanel>
+                    <TabPanel>
+                        <h2>You can validate changes here here</h2>
+                    </TabPanel>
+                </Tabs>
+            </div>
+        );
+    }
 }
 
 export default App;
