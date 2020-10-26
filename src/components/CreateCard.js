@@ -71,7 +71,7 @@ class CreateCard extends React.Component {
 
             }])
         };
-        fetch('http://20.44.213.195:7443/api/bookmarks/createCard', requestOptions)
+        fetch('http://localhost:7443/api/bookmarks/createCard', requestOptions)
             .then(response => response.json())
             .then(data => this.setState());
     }

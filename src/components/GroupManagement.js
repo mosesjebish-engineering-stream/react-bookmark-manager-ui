@@ -11,7 +11,7 @@ const GroupManagement = ({}) => {
     const [term, setTerm] = useState('');
 
     useEffect(() => {
-        fetch(`http://20.44.213.195:7443/api/bookmarks/groupCardsBy?groupBy=GROUP_NAME`)
+        fetch(`http://localhost:7443/api/bookmarks/groupCardsBy?groupBy=GROUP_NAME`)
             .then(res => res.json())
             .then(data => {
                 setImages(data.groupCardDetails);

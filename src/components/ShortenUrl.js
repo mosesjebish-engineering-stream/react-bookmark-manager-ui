@@ -28,7 +28,7 @@ class ShortenUrl extends React.Component {
         const requestOptions = {
             headers: {'Content-Type': 'application/json'},
         };
-        fetch(`http://20.44.213.195:7443/api/bookmarks/shortenUrl?url=` + this.state.url + '&type=group', requestOptions)
+        fetch(`http://localhost:7443/api/bookmarks/shortenUrl?url=` + this.state.url + '&type=group', requestOptions)
             .then(response =>
                 response.json()
             )

@@ -39,7 +39,7 @@ class CreateGroup extends React.Component {
                 ]
             }])
         };
-        fetch('http://20.44.213.195:7443/api/bookmarks/createGroup', requestOptions)
+        fetch('http://localhost:7443/api/bookmarks/createGroup', requestOptions)
             .then(response => response.json())
             .then(data => this.setState());
     }

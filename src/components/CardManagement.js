@@ -10,7 +10,7 @@ const CardManagement = ({cardValue}) => {
     const [term, setTerm] = useState('');
 
     useEffect(() => {
-        fetch(`http://20.44.213.195:7443/api/bookmarks/cards`)
+        fetch(`http://localhost:7443/api/bookmarks/cards`)
             .then(res => res.json())
             .then(data => {
                 setImages(data.cardDetailDtoList);
